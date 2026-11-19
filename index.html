@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#07111f">
+  <meta name="description" content="AI International Domain Center — a gateway to practical AI tools, knowledge, and opportunities around the world.">
+  <title>AI International Domain Center</title>
+  <style>
+    :root {
+      color-scheme: dark;
+      --ink: #f3f7ff;
+      --muted: #a7b5ca;
+      --line: rgba(182, 203, 235, .15);
+      --panel: rgba(17, 31, 52, .78);
+      --blue: #70a7ff;
+      --cyan: #54e1d0;
+      --violet: #ad8bff;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      min-width: 320px;
+      color: var(--ink);
+      background: #07111f;
+      background-image: radial-gradient(ellipse at 75% 4%, rgba(52, 94, 180, .2), transparent 36%),
+        radial-gradient(ellipse at 15% 34%, rgba(34, 138, 148, .11), transparent 34%);
+      line-height: 1.6;
+    }
+    a { color: inherit; text-decoration: none; }
+    button { font: inherit; }
+    .container { width: min(1120px, calc(100% - 40px)); margin-inline: auto; }
+    .topbar { border-bottom: 1px solid var(--line); background: rgba(7, 17, 31, .75); }
+    .nav { min-height: 76px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+    .brand { display: inline-flex; align-items: center; gap: 12px; font-size: .94rem; font-weight: 750; letter-spacing: -.025em; }
+    .brand-mark { width: 38px; height: 38px; display: grid; place-items: center; border: 1px solid rgba(112, 167, 255, .45); border-radius: 12px; color: var(--cyan); background: linear-gradient(145deg, rgba(112, 167, 255, .19), rgba(84, 225, 208, .08)); }
+    .brand-mark svg { width: 21px; }
+    .nav-links { display: flex; align-items: center; gap: 27px; color: var(--muted); font-size: .88rem; }
+    .nav-links a:hover, .footer a:hover { color: white; }
+    .nav-cta, .button { display: inline-flex; align-items: center; justify-content: center; border-radius: 10px; font-weight: 700; transition: transform .18s ease, background .18s ease; }
+    .nav-cta { padding: 10px 15px; color: #081322; background: var(--cyan); font-size: .85rem; }
+    .button:hover, .nav-cta:hover { transform: translateY(-2px); }
+    .hero { padding: 96px 0 84px; text-align: center; }
+    .eyebrow { display: inline-flex; align-items: center; gap: 9px; padding: 6px 12px; border: 1px solid var(--line); border-radius: 999px; color: #c5d5ef; background: rgba(16, 31, 51, .65); font-size: .78rem; letter-spacing: .08em; text-transform: uppercase; }
+    .pulse { width: 7px; height: 7px; border-radius: 50%; background: var(--cyan); box-shadow: 0 0 14px var(--cyan); }
+    h1 { max-width: 850px; margin: 24px auto 18px; font-size: clamp(2.7rem, 7vw, 5.2rem); line-height: 1.04; letter-spacing: -.065em; }
+    .gradient-text { color: transparent; background: linear-gradient(100deg, #f3f7ff 13%, #88c2ff 51%, #61e5d1 90%); background-clip: text; -webkit-background-clip: text; }
+    .hero-copy { max-width: 650px; margin: 0 auto; color: var(--muted); font-size: clamp(1rem, 2vw, 1.15rem); }
+    .hero-actions { display: flex; justify-content: center; flex-wrap: wrap; gap: 12px; margin-top: 30px; }
+    .button { min-height: 48px; padding: 0 19px; }
+    .button-primary { color: #07111f; background: var(--cyan); }
+    .button-secondary { border: 1px solid var(--line); color: #e7efff; background: rgba(18, 33, 54, .7); }
+    .hero-note { margin-top: 17px; color: #8091aa; font-size: .8rem; }
+    .section { padding: 60px 0; }
+    .section-heading { max-width: 660px; margin-bottom: 27px; }
+    .kicker { color: var(--cyan); font-size: .77rem; font-weight: 800; letter-spacing: .13em; text-transform: uppercase; }
+    h2 { margin: 8px 0 9px; font-size: clamp(1.75rem, 4vw, 2.55rem); line-height: 1.15; letter-spacing: -.04em; }
+    .section-heading p { margin: 0; color: var(--muted); }
+    .cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+    .card { min-height: 210px; padding: 23px; border: 1px solid var(--line); border-radius: 16px; background: linear-gradient(145deg, var(--panel), rgba(11, 23, 40, .72)); }
+    .card-icon { width: 42px; height: 42px; display: grid; place-items: center; margin-bottom: 17px; border: 1px solid rgba(112, 167, 255, .22); border-radius: 12px; color: var(--blue); background: rgba(112, 167, 255, .1); font-size: 1.2rem; }
+    .card:nth-child(2) .card-icon { color: var(--cyan); background: rgba(84, 225, 208, .08); border-color: rgba(84, 225, 208, .2); }
+    .card:nth-child(3) .card-icon { color: var(--violet); background: rgba(173, 139, 255, .09); border-color: rgba(173, 139, 255, .2); }
+    h3 { margin: 0 0 7px; font-size: 1.08rem; letter-spacing: -.02em; }
+    .card p { margin: 0; color: var(--muted); font-size: .91rem; }
+    .phase-panel { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; align-items: center; padding: 30px; border: 1px solid rgba(84, 225, 208, .22); border-radius: 20px; background: radial-gradient(ellipse at 100% 0%, rgba(84, 225, 208, .1), transparent 55%), rgba(14, 29, 47, .78); }
+    .phase-panel p { color: var(--muted); }
+    .phase-list { display: grid; gap: 12px; margin: 0; padding: 0; list-style: none; }
+    .phase-list li { display: flex; align-items: flex-start; gap: 11px; color: #dce7f8; font-size: .91rem; }
+    .check { flex: 0 0 21px; width: 21px; height: 21px; display: grid; place-items: center; border-radius: 50%; color: var(--cyan); background: rgba(84, 225, 208, .12); font-size: .78rem; }
+    .contact { padding: 20px 0 84px; }
+    .contact-box { display: flex; align-items: center; justify-content: space-between; gap: 25px; padding: 30px; border: 1px solid var(--line); border-radius: 18px; background: rgba(13, 26, 44, .75); }
+    .contact-box p { max-width: 570px; margin: 6px 0 0; color: var(--muted); }
+    .footer { padding: 23px 0; border-top: 1px solid var(--line); color: #8494ab; font-size: .82rem; }
+    .footer-inner { display: flex; justify-content: space-between; gap: 16px; }
+    @media (max-width: 760px) {
+      .nav-links { gap: 14px; }
+      .nav-links a:not(.nav-cta) { display: none; }
+      .hero { padding: 73px 0 62px; }
+      .cards { grid-template-columns: 1fr; }
+      .card { min-height: auto; }
+      .phase-panel { grid-template-columns: 1fr; gap: 10px; padding: 24px; }
+      .contact-box { align-items: flex-start; flex-direction: column; }
+      .footer-inner { flex-direction: column; }
+    }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *, *::before, *::after { transition-duration: .01ms !important; } }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <nav class="nav container" aria-label="Main navigation">
+      <a class="brand" href="#home" aria-label="AI International Domain Center home">
+        <span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M12 2.8 19.8 7v10L12 21.2 4.2 17V7L12 2.8Z" stroke="currentColor" stroke-width="1.5"/><path d="M8.2 14.8 12 8.2l3.8 6.6M9.5 12.5h5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        <span>AI International<br>Domain Center</span>
+      </a>
+      <div class="nav-links">
+        <a href="#domains">Explore</a>
+        <a href="#phase-two">Phase 2</a>
+        <a href="#about">About</a>
+        <a class="nav-cta" href="#domains">Get started <span aria-hidden="true">↗</span></a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="home">
+    <section class="hero container">
+      <span class="eyebrow"><span class="pulse" aria-hidden="true"></span> Connecting people with AI</span>
+      <h1><span class="gradient-text">Explore the future</span><br>of artificial intelligence</h1>
+      <p class="hero-copy">A global starting point for discovering AI knowledge, practical tools, and opportunities to build a more connected future.</p>
+      <div class="hero-actions">
+        <a class="button button-primary" href="#domains">Explore the center <span aria-hidden="true">&nbsp;→</span></a>
+        <a class="button button-secondary" href="#phase-two">Discover Phase 2</a>
+      </div>
+      <p class="hero-note">An independent initiative for learning, discovery, and collaboration.</p>
+    </section>
+
+    <section class="section container" id="domains">
+      <div class="section-heading">
+        <span class="kicker">A world of possibilities</span>
+        <h2>One center. Many ways to explore.</h2>
+        <p>AI is changing how we learn and work. Start with the areas that matter to you.</p>
+      </div>
+      <div class="cards">
+        <article class="card">
+          <div class="card-icon" aria-hidden="true">⌘</div>
+          <h3>AI Tools &amp; Applications</h3>
+          <p>Find your way through the growing landscape of AI-powered tools and real-world applications.</p>
+        </article>
+        <article class="card">
+          <div class="card-icon" aria-hidden="true">◎</div>
+          <h3>Learning &amp; Knowledge</h3>
+          <p>Build understanding with approachable resources, key concepts, and pathways for continued learning.</p>
+        </article>
+        <article class="card">
+          <div class="card-icon" aria-hidden="true">✳</div>
+          <h3>Global Collaboration</h3>
+          <p>Discover ideas and opportunities that bring communities together across disciplines and borders.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section container" id="phase-two">
+      <div class="phase-panel">
+        <div>
+          <span class="kicker">Now beginning · Phase 2</span>
+          <h2>Building the foundation for discovery</h2>
+          <p>This launch begins the next phase of the AI International Domain Center: shaping a useful, accessible destination for the global AI community.</p>
+        </div>
+        <ul class="phase-list">
+          <li><span class="check" aria-hidden="true">✓</span><span><strong>Establish the center</strong><br>Introduce the mission and core areas of exploration.</span></li>
+          <li><span class="check" aria-hidden="true">✓</span><span><strong>Design for everyone</strong><br>Start with a responsive, accessible experience across devices.</span></li>
+          <li><span class="check" aria-hidden="true">→</span><span><strong>Grow the directory</strong><br>Next: curate resources, tools, and learning pathways.</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="contact container" id="about">
+      <div class="contact-box">
+        <div>
+          <span class="kicker">The journey starts here</span>
+          <h2>Make AI more accessible.</h2>
+          <p>The center is at the beginning of its journey. Explore the foundation and help shape what comes next.</p>
+        </div>
+        <a class="button button-secondary" href="#home">Back to top ↑</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner container">
+      <span>© <span id="year">2026</span> AI International Domain Center</span>
+      <span>Explore thoughtfully. Build responsibly.</span>
+    </div>
+  </footer>
+</body>
+</html>
