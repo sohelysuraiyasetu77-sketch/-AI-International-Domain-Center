@@ -1,7 +1,7 @@
 {
   "name": "AI International Domain Center",
   "short_name": "AIDC",
-  "description": "AI International Domain Center website and app experience",
+  "description": "AI International Domain Center — beginner-first international domain, website and app platform.",
   "id": "/",
   "start_url": "./index.html",
   "scope": "./",
@@ -11,6 +11,7 @@
   "theme_color": "#07111f",
   "orientation": "any",
   "lang": "en",
+  "dir": "ltr",
   "categories": ["business", "education", "productivity", "utilities"],
   "icons": [
     { "src": "./icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable" }
