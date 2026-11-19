@@ -4,175 +4,69 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#07111f">
-  <meta name="description" content="AI International Domain Center — a gateway to practical AI tools, knowledge, and opportunities around the world.">
+  <meta name="description" content="AI International Domain Center — demo platform for international domains, sponsorship, partnerships, referrals, customer protection, and the six-month free launch program.">
+  <meta name="keywords" content="AI domains, international domains, domain services, sponsorship, partnership, affiliate, referrals">
+  <meta property="og:title" content="AI International Domain Center">
+  <meta property="og:description" content="Explore a trusted, international domain services platform.">
+  <meta property="og:type" content="website">
   <title>AI International Domain Center</title>
   <style>
-    :root {
-      color-scheme: dark;
-      --ink: #f3f7ff;
-      --muted: #a7b5ca;
-      --line: rgba(182, 203, 235, .15);
-      --panel: rgba(17, 31, 52, .78);
-      --blue: #70a7ff;
-      --cyan: #54e1d0;
-      --violet: #ad8bff;
-      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-    }
-    * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
-    body {
-      margin: 0;
-      min-width: 320px;
-      color: var(--ink);
-      background: #07111f;
-      background-image: radial-gradient(ellipse at 75% 4%, rgba(52, 94, 180, .2), transparent 36%),
-        radial-gradient(ellipse at 15% 34%, rgba(34, 138, 148, .11), transparent 34%);
-      line-height: 1.6;
-    }
-    a { color: inherit; text-decoration: none; }
-    button { font: inherit; }
-    .container { width: min(1120px, calc(100% - 40px)); margin-inline: auto; }
-    .topbar { border-bottom: 1px solid var(--line); background: rgba(7, 17, 31, .75); }
-    .nav { min-height: 76px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
-    .brand { display: inline-flex; align-items: center; gap: 12px; font-size: .94rem; font-weight: 750; letter-spacing: -.025em; }
-    .brand-mark { width: 38px; height: 38px; display: grid; place-items: center; border: 1px solid rgba(112, 167, 255, .45); border-radius: 12px; color: var(--cyan); background: linear-gradient(145deg, rgba(112, 167, 255, .19), rgba(84, 225, 208, .08)); }
-    .brand-mark svg { width: 21px; }
-    .nav-links { display: flex; align-items: center; gap: 27px; color: var(--muted); font-size: .88rem; }
-    .nav-links a:hover, .footer a:hover { color: white; }
-    .nav-cta, .button { display: inline-flex; align-items: center; justify-content: center; border-radius: 10px; font-weight: 700; transition: transform .18s ease, background .18s ease; }
-    .nav-cta { padding: 10px 15px; color: #081322; background: var(--cyan); font-size: .85rem; }
-    .button:hover, .nav-cta:hover { transform: translateY(-2px); }
-    .hero { padding: 96px 0 84px; text-align: center; }
-    .eyebrow { display: inline-flex; align-items: center; gap: 9px; padding: 6px 12px; border: 1px solid var(--line); border-radius: 999px; color: #c5d5ef; background: rgba(16, 31, 51, .65); font-size: .78rem; letter-spacing: .08em; text-transform: uppercase; }
-    .pulse { width: 7px; height: 7px; border-radius: 50%; background: var(--cyan); box-shadow: 0 0 14px var(--cyan); }
-    h1 { max-width: 850px; margin: 24px auto 18px; font-size: clamp(2.7rem, 7vw, 5.2rem); line-height: 1.04; letter-spacing: -.065em; }
-    .gradient-text { color: transparent; background: linear-gradient(100deg, #f3f7ff 13%, #88c2ff 51%, #61e5d1 90%); background-clip: text; -webkit-background-clip: text; }
-    .hero-copy { max-width: 650px; margin: 0 auto; color: var(--muted); font-size: clamp(1rem, 2vw, 1.15rem); }
-    .hero-actions { display: flex; justify-content: center; flex-wrap: wrap; gap: 12px; margin-top: 30px; }
-    .button { min-height: 48px; padding: 0 19px; }
-    .button-primary { color: #07111f; background: var(--cyan); }
-    .button-secondary { border: 1px solid var(--line); color: #e7efff; background: rgba(18, 33, 54, .7); }
-    .hero-note { margin-top: 17px; color: #8091aa; font-size: .8rem; }
-    .section { padding: 60px 0; }
-    .section-heading { max-width: 660px; margin-bottom: 27px; }
-    .kicker { color: var(--cyan); font-size: .77rem; font-weight: 800; letter-spacing: .13em; text-transform: uppercase; }
-    h2 { margin: 8px 0 9px; font-size: clamp(1.75rem, 4vw, 2.55rem); line-height: 1.15; letter-spacing: -.04em; }
-    .section-heading p { margin: 0; color: var(--muted); }
-    .cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
-    .card { min-height: 210px; padding: 23px; border: 1px solid var(--line); border-radius: 16px; background: linear-gradient(145deg, var(--panel), rgba(11, 23, 40, .72)); }
-    .card-icon { width: 42px; height: 42px; display: grid; place-items: center; margin-bottom: 17px; border: 1px solid rgba(112, 167, 255, .22); border-radius: 12px; color: var(--blue); background: rgba(112, 167, 255, .1); font-size: 1.2rem; }
-    .card:nth-child(2) .card-icon { color: var(--cyan); background: rgba(84, 225, 208, .08); border-color: rgba(84, 225, 208, .2); }
-    .card:nth-child(3) .card-icon { color: var(--violet); background: rgba(173, 139, 255, .09); border-color: rgba(173, 139, 255, .2); }
-    h3 { margin: 0 0 7px; font-size: 1.08rem; letter-spacing: -.02em; }
-    .card p { margin: 0; color: var(--muted); font-size: .91rem; }
-    .phase-panel { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; align-items: center; padding: 30px; border: 1px solid rgba(84, 225, 208, .22); border-radius: 20px; background: radial-gradient(ellipse at 100% 0%, rgba(84, 225, 208, .1), transparent 55%), rgba(14, 29, 47, .78); }
-    .phase-panel p { color: var(--muted); }
-    .phase-list { display: grid; gap: 12px; margin: 0; padding: 0; list-style: none; }
-    .phase-list li { display: flex; align-items: flex-start; gap: 11px; color: #dce7f8; font-size: .91rem; }
-    .check { flex: 0 0 21px; width: 21px; height: 21px; display: grid; place-items: center; border-radius: 50%; color: var(--cyan); background: rgba(84, 225, 208, .12); font-size: .78rem; }
-    .contact { padding: 20px 0 84px; }
-    .contact-box { display: flex; align-items: center; justify-content: space-between; gap: 25px; padding: 30px; border: 1px solid var(--line); border-radius: 18px; background: rgba(13, 26, 44, .75); }
-    .contact-box p { max-width: 570px; margin: 6px 0 0; color: var(--muted); }
-    .footer { padding: 23px 0; border-top: 1px solid var(--line); color: #8494ab; font-size: .82rem; }
-    .footer-inner { display: flex; justify-content: space-between; gap: 16px; }
-    @media (max-width: 760px) {
-      .nav-links { gap: 14px; }
-      .nav-links a:not(.nav-cta) { display: none; }
-      .hero { padding: 73px 0 62px; }
-      .cards { grid-template-columns: 1fr; }
-      .card { min-height: auto; }
-      .phase-panel { grid-template-columns: 1fr; gap: 10px; padding: 24px; }
-      .contact-box { align-items: flex-start; flex-direction: column; }
-      .footer-inner { flex-direction: column; }
-    }
-    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *, *::before, *::after { transition-duration: .01ms !important; } }
+    :root{color-scheme:dark;--ink:#f3f7ff;--muted:#a7b5ca;--line:rgba(182,203,235,.15);--panel:rgba(17,31,52,.78);--blue:#70a7ff;--cyan:#54e1d0;--violet:#ad8bff;--danger:#ff9b9b;--warn:#ffd166;--ok:#67ddb0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;min-width:320px;color:var(--ink);background:#07111f;background-image:radial-gradient(ellipse at 75% 4%,rgba(52,94,180,.2),transparent 36%),radial-gradient(ellipse at 15% 34%,rgba(34,138,148,.11),transparent 34%);line-height:1.6}a{color:inherit;text-decoration:none}button,input,select,textarea{font:inherit}button,a{cursor:pointer}button:disabled{cursor:not-allowed;opacity:.55}.container{width:min(1120px,calc(100% - 40px));margin-inline:auto}.topbar{position:sticky;top:0;z-index:40;border-bottom:1px solid var(--line);background:rgba(7,17,31,.94);backdrop-filter:blur(14px)}.nav{min-height:76px;display:flex;align-items:center;justify-content:space-between;gap:20px}.brand{display:flex;align-items:center;gap:12px;font-size:.94rem;font-weight:750}.brand-mark{width:38px;height:38px;display:grid;place-items:center;border:1px solid rgba(112,167,255,.45);border-radius:12px;color:var(--cyan);background:linear-gradient(145deg,rgba(112,167,255,.19),rgba(84,225,208,.08))}.nav-links{display:flex;align-items:center;gap:18px;color:var(--muted);font-size:.85rem}.nav-links a:hover{color:white}.nav-cta,.button{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:46px;padding:0 16px;border:1px solid transparent;border-radius:10px;font-weight:750}.nav-cta,.button-primary{color:#081322;background:var(--cyan)}.button-secondary{border-color:var(--line);color:#e7efff;background:rgba(18,33,54,.7)}.button-danger{border-color:rgba(255,155,155,.3);color:var(--danger);background:rgba(255,155,155,.08)}.button:hover:not(:disabled){transform:translateY(-1px);filter:brightness(1.05)}.language-select{min-height:38px;border:1px solid var(--line);border-radius:8px;color:var(--ink);background:#0d1b2d;padding:0 8px}.menu-button{display:none;width:42px;height:42px;border:1px solid var(--line);border-radius:9px;color:var(--ink);background:#0d1b2d}.hero{padding:86px 0 72px;text-align:center}.eyebrow,.status-pill{display:inline-flex;align-items:center;gap:8px;padding:6px 11px;border:1px solid var(--line);border-radius:999px;color:#c5d5ef;background:rgba(16,31,51,.65);font-size:.76rem}.pulse{width:7px;height:7px;border-radius:50%;background:var(--cyan);box-shadow:0 0 14px var(--cyan)}h1{max-width:900px;margin:22px auto 16px;font-size:clamp(2.6rem,7vw,5rem);line-height:1.04;letter-spacing:-.06em}h2{margin:8px 0 10px;font-size:clamp(1.75rem,4vw,2.55rem);line-height:1.15;letter-spacing:-.04em}h3{margin:0 0 7px}.gradient-text{color:transparent;background:linear-gradient(100deg,#f3f7ff 13%,#88c2ff 51%,#61e5d1 90%);background-clip:text;-webkit-background-clip:text}.hero-copy{max-width:680px;margin:0 auto;color:var(--muted);font-size:clamp(1rem,2vw,1.15rem)}.hero-actions{display:flex;justify-content:center;flex-wrap:wrap;gap:12px;margin-top:28px}.hero-note{margin-top:16px;color:#8091aa;font-size:.8rem}.section{padding:58px 0}.section-heading{max-width:720px;margin-bottom:26px}.section-heading p,.card p,.muted{color:var(--muted)}.kicker{color:var(--cyan);font-size:.77rem;font-weight:800;letter-spacing:.13em;text-transform:uppercase}.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.card{min-height:190px;padding:22px;border:1px solid var(--line);border-radius:16px;background:linear-gradient(145deg,var(--panel),rgba(11,23,40,.72))}.card-icon{width:42px;height:42px;display:grid;place-items:center;margin-bottom:16px;border:1px solid rgba(112,167,255,.22);border-radius:12px;color:var(--blue);background:rgba(112,167,255,.1)}.card:nth-child(2n) .card-icon{color:var(--cyan);border-color:rgba(84,225,208,.2);background:rgba(84,225,208,.08)}.phase-panel{display:grid;grid-template-columns:1fr 1fr;gap:30px;align-items:center;padding:30px;border:1px solid rgba(84,225,208,.22);border-radius:20px;background:radial-gradient(ellipse at 100% 0%,rgba(84,225,208,.1),transparent 55%),rgba(14,29,47,.78)}.phase-list{display:grid;gap:12px;margin:0;padding:0;list-style:none}.phase-list li{display:flex;gap:11px;color:#dce7f8;font-size:.91rem}.check{flex:0 0 21px;width:21px;height:21px;display:grid;place-items:center;border-radius:50%;color:var(--cyan);background:rgba(84,225,208,.12)}.grid-two{display:grid;grid-template-columns:1.15fr .85fr;gap:16px}.panel{padding:22px;border:1px solid var(--line);border-radius:16px;background:rgba(13,26,44,.78)}label{display:block;margin:12px 0 6px;color:#dce7f8;font-size:.82rem;font-weight:700}input,select,textarea{width:100%;min-height:44px;border:1px solid var(--line);border-radius:9px;color:var(--ink);background:#0a1626;padding:10px 12px}textarea{min-height:100px;resize:vertical}.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}.full{grid-column:1/-1}.message{display:none;margin-top:12px;padding:10px 12px;border:1px solid var(--line);border-radius:9px;color:#dce7f8;background:rgba(112,167,255,.07)}.message.show{display:block}.message.error{border-color:rgba(255,155,155,.35);color:var(--danger)}.message.success{border-color:rgba(103,221,176,.35);color:var(--ok)}.table-wrap{overflow-x:auto}.data-table{width:100%;border-collapse:collapse;font-size:.86rem}.data-table th,.data-table td;padding:10px;border-bottom:1px solid var(--line);text-align:left;white-space:nowrap}.status{display:inline-flex;padding:3px 8px;border:1px solid var(--line);border-radius:999px;font-size:.72rem}.status.pending{color:var(--warn)}.status.required{color:var(--danger)}.status.demo{color:var(--blue)}.tabs{display:flex;gap:8px;overflow-x:auto;margin-bottom:14px}.tab{flex:0 0 auto;min-height:40px;padding:0 12px;border:1px solid var(--line);border-radius:9px;color:var(--muted);background:#0d1b2d}.tab.active{color:#07111f;background:var(--cyan)}.tab-panel{display:none}.tab-panel.active{display:block}.admin-shell{display:none}.admin-shell.open{display:grid;grid-template-columns:210px 1fr;gap:16px}.admin-sidebar{display:grid;align-content:start;gap:7px;padding:12px;border:1px solid var(--line);border-radius:14px;background:#0d1b2d}.admin-side-button{min-height:40px;border:0;border-radius:8px;text-align:left;color:var(--muted);background:transparent;padding:8px 10px}.admin-side-button.active,.admin-side-button:hover{color:white;background:rgba(112,167,255,.11)}.metric-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.metric{padding:15px;border:1px solid var(--line);border-radius:12px;background:rgba(112,167,255,.05)}.metric strong{display:block;font-size:1.35rem}.chat-log{height:280px;overflow-y:auto;padding:12px;border:1px solid var(--line);border-radius:12px;background:#091523}.chat-message{max-width:88%;margin:8px 0;padding:9px 11px;border-radius:11px}.chat-message.user{margin-left:auto;background:rgba(112,167,255,.17)}.chat-message.ai{border:1px solid var(--line);background:#102139}.chat-form{display:grid;grid-template-columns:1fr auto;gap:8px;margin-top:10px}.chat-form input{min-height:48px}.notice{border-left:3px solid var(--warn);padding:10px 12px;background:rgba(255,209,102,.06);color:#e9deb9}.protected{position:relative}.lock-overlay{padding:40px;text-align:center}.footer{padding:23px 0;border-top:1px solid var(--line);color:#8494ab;font-size:.82rem}.footer-inner{display:flex;justify-content:space-between;gap:16px}.toast{position:fixed;right:18px;bottom:18px;z-index:80;max-width:min(360px,calc(100% - 36px));padding:12px 14px;border:1px solid var(--line);border-radius:10px;background:#102139;box-shadow:0 12px 36px rgba(0,0,0,.35)}@media(max-width:900px){.cards{grid-template-columns:1fr 1fr}.grid-two,.phase-panel{grid-template-columns:1fr}.metric-grid{grid-template-columns:1fr 1fr}.admin-shell.open{grid-template-columns:1fr}.admin-sidebar{grid-template-columns:repeat(3,1fr)}}@media(max-width:760px){.container{width:min(1120px,calc(100% - 28px))}.menu-button{display:block}.nav-links{display:none;position:absolute;left:14px;right:14px;top:68px;align-items:stretch;flex-direction:column;padding:12px;border:1px solid var(--line);border-radius:12px;background:#0d1b2d}.nav-links.open{display:flex}.nav-links a{padding:8px}.hero{padding:68px 0 55px}.cards{grid-template-columns:1fr}.form-grid{grid-template-columns:1fr}.full{grid-column:auto}.phase-panel{padding:22px}.footer-inner{flex-direction:column}.metric-grid{grid-template-columns:1fr}.admin-sidebar{grid-template-columns:1fr}.chat-form{grid-template-columns:1fr}.footer-inner span:last-child{display:none}}
   </style>
 </head>
 <body>
-  <header class="topbar">
-    <nav class="nav container" aria-label="Main navigation">
-      <a class="brand" href="#home" aria-label="AI International Domain Center home">
-        <span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M12 2.8 19.8 7v10L12 21.2 4.2 17V7L12 2.8Z" stroke="currentColor" stroke-width="1.5"/><path d="M8.2 14.8 12 8.2l3.8 6.6M9.5 12.5h5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-        <span>AI International<br>Domain Center</span>
-      </a>
-      <div class="nav-links">
-        <a href="#domains">Explore</a>
-        <a href="#phase-two">Phase 2</a>
-        <a href="#about">About</a>
-        <a class="nav-cta" href="#domains">Get started <span aria-hidden="true">↗</span></a>
-      </div>
-    </nav>
-  </header>
-
-  <main id="home">
-    <section class="hero container">
-      <span class="eyebrow"><span class="pulse" aria-hidden="true"></span> Connecting people with AI</span>
-      <h1><span class="gradient-text">Explore the future</span><br>of artificial intelligence</h1>
-      <p class="hero-copy">A global starting point for discovering AI knowledge, practical tools, and opportunities to build a more connected future.</p>
-      <div class="hero-actions">
-        <a class="button button-primary" href="#domains">Explore the center <span aria-hidden="true">&nbsp;→</span></a>
-        <a class="button button-secondary" href="#phase-two">Discover Phase 2</a>
-      </div>
-      <p class="hero-note">An independent initiative for learning, discovery, and collaboration.</p>
-    </section>
-
-    <section class="section container" id="domains">
-      <div class="section-heading">
-        <span class="kicker">A world of possibilities</span>
-        <h2>One center. Many ways to explore.</h2>
-        <p>AI is changing how we learn and work. Start with the areas that matter to you.</p>
-      </div>
-      <div class="cards">
-        <article class="card">
-          <div class="card-icon" aria-hidden="true">⌘</div>
-          <h3>AI Tools &amp; Applications</h3>
-          <p>Find your way through the growing landscape of AI-powered tools and real-world applications.</p>
-        </article>
-        <article class="card">
-          <div class="card-icon" aria-hidden="true">◎</div>
-          <h3>Learning &amp; Knowledge</h3>
-          <p>Build understanding with approachable resources, key concepts, and pathways for continued learning.</p>
-        </article>
-        <article class="card">
-          <div class="card-icon" aria-hidden="true">✳</div>
-          <h3>Global Collaboration</h3>
-          <p>Discover ideas and opportunities that bring communities together across disciplines and borders.</p>
-        </article>
-      </div>
-    </section>
-
-    <section class="section container" id="phase-two">
-      <div class="phase-panel">
-        <div>
-          <span class="kicker">Now beginning · Phase 2</span>
-          <h2>Building the foundation for discovery</h2>
-          <p>This launch begins the next phase of the AI International Domain Center: shaping a useful, accessible destination for the global AI community.</p>
-        </div>
-        <ul class="phase-list">
-          <li><span class="check" aria-hidden="true">✓</span><span><strong>Establish the center</strong><br>Introduce the mission and core areas of exploration.</span></li>
-          <li><span class="check" aria-hidden="true">✓</span><span><strong>Design for everyone</strong><br>Start with a responsive, accessible experience across devices.</span></li>
-          <li><span class="check" aria-hidden="true">→</span><span><strong>Grow the directory</strong><br>Next: curate resources, tools, and learning pathways.</span></li>
-        </ul>
-      </div>
-    </section>
-
-    <section class="contact container" id="about">
-      <div class="contact-box">
-        <div>
-          <span class="kicker">The journey starts here</span>
-          <h2>Make AI more accessible.</h2>
-          <p>The center is at the beginning of its journey. Explore the foundation and help shape what comes next.</p>
-        </div>
-        <a class="button button-secondary" href="#home">Back to top ↑</a>
-      </div>
-    </section>
-  </main>
-
-  <footer class="footer">
-    <div class="footer-inner container">
-      <span>© <span id="year">2026</span> AI International Domain Center</span>
-      <span>Explore thoughtfully. Build responsibly.</span>
-    </div>
-  </footer>
+<header class="topbar"><nav class="nav container" aria-label="Main navigation">
+  <a class="brand" href="#home"><span class="brand-mark" aria-hidden="true">AI</span><span>AI International<br>Domain Center</span></a>
+  <button class="menu-button" id="menuButton" type="button" aria-label="Open navigation" aria-expanded="false">☰</button>
+  <div class="nav-links" id="navLinks"><a href="#domains" data-i18n="explore">Explore</a><a href="#free-launch">Free Launch</a><a href="#partners">Partners</a><a href="#support">Support</a><a href="#admin">Admin</a><select class="language-select" id="languageSelect" aria-label="Language"><option value="en">English</option><option value="bn">বাংলা</option><option value="ar">العربية</option><option value="es">Español</option><option value="fr">Français</option><option value="hi">हिन्दी</option></select></div>
+</nav></header>
+<main id="home">
+<section class="hero container"><span class="eyebrow"><span class="pulse"></span><span data-i18n="eyebrow">Connecting people with AI</span></span><h1><span class="gradient-text" data-i18n="headline">Explore the future</span><br><span data-i18n="headline2">of international domains</span></h1><p class="hero-copy" data-i18n="intro">A global starting point for practical domain services, AI-assisted discovery, learning, sponsorship, and partnerships.</p><div class="hero-actions"><a class="button button-primary" href="#domain-tools">Explore the center →</a><a class="button button-secondary" href="#free-launch">Free Launch terms</a></div><p class="hero-note">Demo platform — external registrars, payments, and AI providers are not connected.</p></section>
+<section class="section container" id="domains"><div class="section-heading"><span class="kicker">International domains</span><h2>Discover, request, and manage</h2><p>Each real domain action requires provider confirmation. Demo search results do not represent availability or successful registration.</p></div><div class="cards"><article class="card"><div class="card-icon">⌘</div><h3>Domain Discovery</h3><p>Generate ideas and run demo availability searches.</p></article><article class="card"><div class="card-icon">◎</div><h3>DNS &amp; Account Tools</h3><p>Preview status, DNS, renewal, and transfer workflows.</p></article><article class="card"><div class="card-icon">✳</div><h3>Global Opportunities</h3><p>Sponsorship, partnerships, referrals, and approved campaigns.</p></article></div></section>
+<section class="section container" id="domain-tools"><div class="grid-two"><div class="panel"><span class="kicker">AI domain generator · Demo</span><h2>Explore name ideas</h2><form id="generatorForm"><label for="topicInput">Topic or business</label><input id="topicInput" required maxlength="60" placeholder="e.g. international education"><button class="button button-primary" type="submit" style="margin-top:12px">Generate demo ideas</button></form><div id="generatorResult" class="message"></div></div><div class="panel"><span class="kicker">Domain search · Integration pending</span><h2>Check a name</h2><form id="searchForm"><label for="domainInput">Domain name</label><input id="domainInput" required placeholder="example.com"><button class="button button-secondary" type="submit" style="margin-top:12px">Search demo status</button></form><div id="searchResult" class="message"></div></div></div></section>
+<section class="section container" id="free-launch"><div class="phase-panel"><div><span class="kicker">Six-Month Global Free Launch</span><h2>Free access, with honest disclosure</h2><p>The introductory campaign provides eligible platform features without compulsory subscriptions. Real registrar, renewal, DNS, or transfer costs are never advertised as free unless funded and confirmed.</p></div><ul class="phase-list"><li><span class="check">✓</span><span><strong>No compulsory paid plan</strong><br>No automatic upgrade or hidden charge.</span></li><li><span class="check">✓</span><span><strong>Campaign controls</strong><br>Dates, eligibility, rewards, and limits require authorized configuration.</span></li><li><span class="check">→</span><span><strong>Real costs</strong><br>Pending registrar promotion or sponsor funding.</span></li></ul></div></section>
+<section class="section container" id="partners"><div class="section-heading"><span class="kicker">Phase 3 · Demo applications</span><h2>Business growth ecosystem</h2><p>No company is presented as an approved sponsor or partner unless an agreement is verified. Applications are stored only in this browser in demo mode.</p></div><div class="cards"><div class="card"><h3>International sponsorship</h3><p>Apply to sponsor eligible free domain services.</p><button class="button button-secondary open-form" type="button" data-form="sponsorFormWrap">Sponsor application</button></div><div class="card"><h3>Registrar &amp; provider partnership</h3><p>Submit a registrar, DNS, hosting, reseller, or technology proposal.</p><button class="button button-secondary open-form" type="button" data-form="partnerFormWrap">Partnership application</button></div><div class="card"><h3>Affiliate &amp; referral</h3><p>Generate a demo referral code. No cash promise or commission is active.</p><button class="button button-secondary" id="generateReferral" type="button">Create demo referral code</button><div id="referralResult" class="message"></div></div></div>
+<div class="grid-two" style="margin-top:16px"><div class="panel" id="sponsorFormWrap" hidden><span class="kicker">Sponsor application</span><form id="sponsorForm"><div class="form-grid"><div><label>Company name</label><input name="company" required></div><div><label>Country</label><input name="country" required></div><div><label>Business email</label><input name="email" type="email" required></div><div><label>Company website</label><input name="website" type="url"></div><div class="full"><label>Proposal</label><textarea name="proposal" required maxlength="1000"></textarea></div></div><button class="button button-primary" type="submit" style="margin-top:12px">Submit demo application</button></form><div id="sponsorMessage" class="message"></div></div><div class="panel" id="partnerFormWrap" hidden><span class="kicker">Partnership application</span><form id="partnerForm"><div class="form-grid"><div><label>Organization</label><input name="organization" required></div><div><label>Partnership type</label><select name="type"><option>Registrar</option><option>DNS provider</option><option>Hosting provider</option><option>Technology</option><option>Reseller</option></select></div><div class="full"><label>Proposal</label><textarea name="proposal" required maxlength="1000"></textarea></div></div><button class="button button-primary" type="submit" style="margin-top:12px">Submit demo application</button></form><div id="partnerMessage" class="message"></div></div></div></section>
+<section class="section container" id="support"><div class="grid-two"><div class="panel"><span class="kicker">Customer protection</span><h2>Report a concern</h2><p class="muted">Use this demo form to document suspected phishing, payment deception, unauthorized changes, or a false confirmation.</p><form id="complaintForm"><div class="form-grid"><div><label>Category</label><select name="category"><option>Phishing or scam</option><option>Unauthorized domain change</option><option>Suspicious payment request</option><option>Renewal or transfer concern</option><option>False sponsorship claim</option></select></div><div><label>Reference (if any)</label><input name="reference"></div><div class="full"><label>Details</label><textarea name="details" required maxlength="1500"></textarea></div></div><button class="button button-danger" type="submit" style="margin-top:12px">Submit protection report</button></form><div id="complaintMessage" class="message"></div></div><div class="panel"><span class="kicker">Support</span><h2>Submit a ticket</h2><form id="ticketForm"><label>Subject</label><input name="subject" required maxlength="100"><label>Category</label><select name="category"><option>Domain registration</option><option>DNS troubleshooting</option><option>Renewal or transfer</option><option>Account security</option><option>Free launch</option></select><label>Question</label><textarea name="question" required maxlength="1500"></textarea><button class="button button-secondary" type="submit" style="margin-top:12px">Create demo ticket</button></form><div id="ticketMessage" class="message"></div></div></div></section>
+<section class="section container" id="admin"><div class="section-heading"><span class="kicker">Admin Master Control · Protected area</span><h2>Authorized administrators only</h2><p>Static frontend demonstrations do not provide secure role-based authentication. Production access requires backend authorization, secure sessions, MFA, and server-enforced permissions.</p></div><div class="panel protected" id="adminGate"><div class="lock-overlay"><h3>Admin access demo</h3><p class="muted">AI Integration Pending · No real account data · No live action capability</p><button class="button button-primary" id="openAdminDemo" type="button">Open read-only demo</button></div></div>
+<div class="admin-shell" id="adminShell"><aside class="admin-sidebar" aria-label="Admin sections"><button class="admin-side-button active" data-admin-tab="overview">Overview</button><button class="admin-side-button" data-admin-tab="customers">Customers</button><button class="admin-side-button" data-admin-tab="security">Security</button><button class="admin-side-button" data-admin-tab="applications">Applications</button><button class="admin-side-button" data-admin-tab="reports">Reports</button><button class="admin-side-button" data-admin-tab="ai">Admin AI Chat</button><button class="admin-side-button" data-admin-tab="handover">Handover</button></aside><div id="adminContent">
+<div class="admin-tab-panel" data-admin-panel="overview"><div class="metric-grid"><div class="metric"><span>Demo customers</span><strong id="demoCustomerCount">0</strong></div><div class="metric"><span>Open demo tickets</span><strong id="demoTicketCount">0</strong></div><div class="metric"><span>Applications</span><strong id="demoAppCount">0</strong></div><div class="metric"><span>AI status</span><strong style="font-size:.9rem">Pending</strong></div></div><div class="panel" style="margin-top:12px"><h3>Financial status</h3><p class="muted">No actual revenue, sponsor contributions, or expenses are recorded. All financial values shown by this demo are zero or explicitly labeled demo data.</p></div></div>
+<div class="admin-tab-panel" data-admin-panel="customers" hidden><div class="panel"><h3>Customer records</h3><p class="muted">Production customer management is Integration Pending. This demo only lists locally submitted support items and does not expose passwords or private credentials.</p><div class="table-wrap"><table class="data-table"><thead><tr><th>Record</th><th>Status</th><th>Source</th></tr></thead><tbody id="customerTable"><tr><td>No demo records</td><td><span class="status demo">Demo Mode</span></td><td>Local browser</td></tr></tbody></table></div></div></div>
+<div class="admin-tab-panel" data-admin-panel="security" hidden><div class="panel"><h3>Security alerts</h3><div class="notice">Static mode: no secure authentication, database, secret storage, or live suspicious-activity engine is connected.</div><ul><li>Monitor unauthorized domain changes.</li><li>Verify every payment and registrar status.</li><li>Escalate suspected account takeover or phishing.</li><li>Do not expose customer secrets or API credentials.</li></ul></div></div>
+<div class="admin-tab-panel" data-admin-panel="applications" hidden><div class="panel"><h3>Sponsor and partnership applications</h3><div id="applicationList"><p class="muted">No locally submitted demo applications.</p></div></div></div>
+<div class="admin-tab-panel" data-admin-panel="reports" hidden><div class="panel"><h3>Demo reports</h3><p class="muted">Export is available for locally generated demonstration records. It does not contain verified business, payment, or registrar data.</p><button class="button button-secondary" id="exportAudit" type="button">Export demo audit CSV</button></div></div>
+<div class="admin-tab-panel" data-admin-panel="ai" hidden><div class="panel"><div class="notice"><strong>Demo Mode — AI provider not connected.</strong> This assistant gives only general, cautious guidance. It cannot use live platform data or perform sensitive actions.</div><div class="chat-log" id="chatLog" aria-live="polite"><div class="chat-message ai">Ask a general question about domains, DNS, security, sponsorship, or the workflow. Verified facts, assumptions, and integration status will be clearly separated.</div></div><form class="chat-form" id="chatForm"><input id="chatInput" required maxlength="500" placeholder="Describe the issue or question"><button class="button button-primary" type="submit">Send</button></form></div></div>
+<div class="admin-tab-panel" data-admin-panel="handover" hidden><div class="panel"><h3>Handover status</h3><ul><li>Website shell and responsive UI: implemented.</li><li>Form validation and demo local workflows: implemented.</li><li>External registrar, DNS, payment, database, MFA, and AI provider: not connected.</li><li>Static demo admin access: not production authorization.</li><li>Runtime browser testing and external integration tests: not performed.</li></ul><button class="button button-secondary" id="downloadGuide" type="button">Download handover guide</button></div></div>
+</div></div></section>
+<section class="section container" id="privacy"><div class="phase-panel"><div><span class="kicker">Trust and transparency</span><h2>Policies and consent</h2><p>Legal documents and consent controls should be reviewed with qualified legal and privacy advisers before public launch.</p></div><ul class="phase-list"><li><span class="check">✓</span><span>Terms, Privacy, Cookies, Refund, Domain, Sponsor, Affiliate and Free Launch policy areas identified.</span></li><li><span class="check">✓</span><span>Demo browser records are not presented as secure customer records.</span></li><li><span class="check">→</span><span>Backend consent, retention, deletion and data-protection controls pending.</span></li></ul></div></section>
+</main>
+<footer class="footer"><div class="footer-inner container"><span>© 2026 AI International Domain Center</span><span>Demo and integration status are disclosed transparently.</span></div></footer><div class="toast" id="toast" hidden role="status" aria-live="polite"></div>
+<script>
+(function(){
+'use strict';
+var audit=[];var menu=document.getElementById('menuButton');var nav=document.getElementById('navLinks');
+function toast(text){var t=document.getElementById('toast');t.textContent=text;t.hidden=false;clearTimeout(t._timer);t._timer=setTimeout(function(){t.hidden=true},4200)}
+function showMessage(id,text,type){var el=document.getElementById(id);el.textContent=text;el.className='message show '+(type||'');}
+function escapeHtml(value){return String(value).replace(/[&<>'"]/g,function(ch){return {'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39','\"':'&quot;'}[ch]})}
+function auditPush(action,result){audit.push({time:new Date().toISOString(),action:action,result:result||'Recorded in demo browser only'})}
+menu.addEventListener('click',function(){var open=nav.classList.toggle('open');menu.setAttribute('aria-expanded',open?'true':'false')});
+nav.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){nav.classList.remove('open');menu.setAttribute('aria-expanded','false')})});
+var translations={bn:{explore:'অনুসন্ধান',eyebrow:'মানুষকে AI-এর সাথে সংযুক্ত করা',headline:'ভবিষ্যৎ অন্বেষণ করুন',headline2:'আন্তর্জাতিক ডোমেইনের',intro:'ডোমেইন পরিষেবা, AI সহায়তা, স্পন্সরশিপ এবং পার্টনারশিপের জন্য একটি বৈশ্বিক সূচনা বিন্দু।'},ar:{explore:'استكشف',eyebrow:'ربط الأشخاص بالذكاء الاصطناعي',headline:'استكشف المستقبل',headline2:'للنطاقات الدولية',intro:'نقطة انطلاق عالمية لخدمات النطاقات والتعلم والرعاية والشراكات.'},es:{explore:'Explorar',eyebrow:'Conectando personas con IA',headline:'Explora el futuro',headline2:'de los dominios internacionales',intro:'Un punto de partida global para servicios de dominios, aprendizaje, patrocinio y asociaciones.'},fr:{explore:'Explorer',eyebrow:'Relier les personnes à l’IA',headline:'Explorez le futur',headline2:'des domaines internationaux',intro:'Un point de départ mondial pour les services de domaines, le parrainage et les partenariats.'},hi:{explore:'एक्सप्लोर करें',eyebrow:'लोगों को AI से जोड़ना',headline:'भविष्य का अन्वेषण करें',headline2:'अंतरराष्ट्रीय डोमेन का',intro:'डोमेन सेवाओं, सीखने, प्रायोजन और साझेदारी के लिए एक वैश्विक प्रारंभिक स्थान।'}};
+document.getElementById('languageSelect').addEventListener('change',function(){var lang=this.value;document.documentElement.lang=lang;document.documentElement.dir=(lang==='ar')?'rtl':'ltr';document.querySelectorAll('[data-i18n]').forEach(function(el){var key=el.getAttribute('data-i18n');if(lang==='en'||!translations[lang]||!translations[lang][key]){var defaults={explore:'Explore',eyebrow:'Connecting people with AI',headline:'Explore the future',headline2:'of international domains',intro:'A global starting point for practical domain services, AI-assisted discovery, learning, sponsorship, and partnerships.'};el.textContent=defaults[key]||el.textContent}else{el.textContent=translations[lang][key]}})});
+document.getElementById('generatorForm').addEventListener('submit',function(e){e.preventSlide?e.preventSlide():e.preventDefault();var topic=document.getElementById('topicInput').value.trim();if(topic.length<2){showMessage('generatorResult','Enter at least two characters.','error');return}var words=topic.toLowerCase().replace(/[^a-z0-9 ]/g,'').split(/\s+/).filter(Boolean).slice(0,2);var base=(words.join('')||'global').slice(0,20);showMessage('generatorResult','Demo ideas: '+base+'.com, '+base+'global.com, get-'+base+'.ai. Availability is not verified.','success');auditPush('Generated demo domain ideas')});
+document.getElementById('searchForm').addEventListener('submit',function(e){e.preventDefault();var value=document.getElementById('domainInput').value.trim().toLowerCase();if(!/^(?=.{3,253}$)([a-z0-9](?:[a-z0-9-]{0,61}[a-z0-9])?\.)+[a-z]{2,63}$/.test(value)){showMessage('searchResult','Enter a valid domain format, such as example.com.','error');return}showMessage('searchResult','Status: Verification Required — registrar availability integration pending. No successful registration or availability claim is made.','');auditPush('Submitted demo domain search')});
+document.querySelectorAll('.open-form').forEach(function(button){button.addEventListener('click',function(){var wrap=document.getElementById(button.dataset.form);wrap.hidden=!wrap.hidden;button.textContent=wrap.hidden?'Sponsor application':'Hide form'})});
+document.getElementById('generateReferral').addEventListener('click',function(){var code='AIDC-DEMO-'+Math.random().toString(36).slice(2,8).toUpper();showMessage('referralResult','Demo code: '+code+' — no affiliate cash commission or live referral tracking is active.','success');auditPush('Generated demo referral code')});
+function demoSubmit(formId,messageId,label){document.getElementById(formId).addEventListener('submit',function(e){e.preventDefault();var form=e.currentTarget;if(!form.reportValidity())return;showMessage(messageId,'Demo application received in this browser only. It has not been sent to a real team or approved.','success');auditPush(label+' demo submission');form.reset()})}
+demoSubmit('sponsorForm','sponsorMessage','Sponsor');demoSubmit('partnerForm','partnerMessage','Partner');demoSubmit('complaintForm','complaintMessage','Protection report');demoSubmit('ticketForm','ticketMessage','Support ticket');
+function updateAdminCounts(){document.getElementById('demoTicketCount').textContent=String(document.querySelectorAll('#ticketMessage.show').length);document.getElementById('demoAppCount').textContent=String(document.querySelectorAll('#sponsorMessage.show,#partnerMessage.show').length)}
+document.getElementById('openAdminDemo').addEventListener('click',function(){document.getElementById('adminGate').hidden=true;document.getElementById('adminShell').classList.add('open');updateAdminCounts();auditPush('Opened read-only admin demo','No production authorization');toast('Read-only demo opened')});
+document.querySelectorAll('.admin-side-button').forEach(function(button){button.addEventListener('click',function(){document.querySelectorAll('.admin-side-button').forEach(function(x){x.classList.remove('active')});button.classList.add('active');var target=button.dataset.adminTab;document.querySelectorAll('[data-admin-panel]').forEach(function(panel){panel.hidden=panel.dataset.adminPanel!==target})})});
+function aiResponse(question){var q=question.toLowerCase();if(q.includes('password')||q.includes('api key')||q.includes('credential'))return 'Verified fact: Demo Mode contains no real credentials. Passwords and API keys must stay in secure backend configuration and must never be pasted into chat. Recommendation: rotate or revoke exposed secrets and investigate access logs. Human approval is required.';if(q.includes('transfer')||q.includes('ownership')||q.includes('dns'))return 'Verified fact: this demo cannot perform domain, ownership, or DNS changes. Recommended safe review: confirm the customer identity, registrar verification status, authorization evidence, recent account activity, and the registry audit trail. Never transfer or change ownership based on chat advice alone.';if(q.includes('payment')||q.includes('refund')||q.includes('charge'))return 'Verified fact: no payment provider is connected. Do not tell the customer a payment or refund succeeded unless a verified transaction record exists. Recommended: check the provider status, invoice, and authorization; keep disputed funds protected until reviewed.';if(q.includes('fraud')||q.includes('phishing')||q.includes('scam'))return 'Safety guidance only: preserve evidence, avoid accusing the customer or another party of fraud without enough proof, do not follow links, and escalate suspicious account or payment activity. This demo cannot confirm identity or criminal intent.';if(q.includes('sponsor')||q.includes('partner'))return 'Verified fact: no sponsor or partner is confirmed by this demo. Do not describe a company as approved until the organization and agreement are verified through the authorized business process. Before approval, document scope, benefits, funding, terms, and compliance review.';return 'Demo AI guidance: I cannot access live platform data, verify a real domain, inspect a transaction, or take an action. Explain the exact verified facts, identify unknowns as unknown, collect only the minimum necessary evidence, and obtain authorized human approval before any sensitive operation.'}
+document.getElementById('chatForm').addEventListener('submit',function(e){e.preventDefault();var input=document.getElementById('chatInput');var question=input.value.trim();if(!question)return;var log=document.getElementById('chatLog');var user=document.createElement('div');user.className='chat-message user';user.textContent=question;var ai=document.createElement('div');ai.className='chat-message ai';ai.textContent='AI Integration Pending / Demo Mode — '+aiResponse(question);log.appendChild(user);log.appendChild(ai);input.value='';log.scrollTop=log.scrollHeight;auditPush('Admin AI demo question','No AI provider or live action')});
+document.getElementById('exportAudit').addEventListener('click',function(){var header='timestamp,action,result\n';var csv=header+audit.map(function(x){return [x.time,x.action,x.result].map(function(v){return '"'+String(v).replace(/"/g,'""')+'"'}).join(',')}).join('\n');var blob=new Blob([csv],{type:'text/csv'});var url=URL.createObjectURL(blob);var a=document.createElement('a');a.href=url;a.download='aidc-demo-audit.csv';a.click();URL.revokeObjectURL(url);toast('Demo audit exported')});
+document.getElementById('downloadGuide').addEventListener('click',function(){var text='AI International Domain Center — Handover Guide\n\n'+ '1. Open index.html through an HTTPS-enabled web server.\n'+ '2. External services are pending: registrar, DNS, payments, database, authentication, MFA and AI provider.\n'+ '3. The static admin preview is not production authorization.\n'+ '4. Do not enter real passwords, secrets, card data or customer data in demo forms.\n'+ '5. Configure backend authentication and role permissions before public launch.\n'+ '6. Verify no hidden charges or automatic renewals before enabling billing.\n'+ '7. Preserve the six-month free campaign terms and sponsor funding evidence.\n'+ '8. Back up the database and audit logs according to a documented recovery plan.\n\nBengali summary:\nপ্রথমে HTTPS সার্ভারে সাইটটি চালান। রেজিস্ট্রার, পেমেন্ট, DNS, ডেটাবেস, মেল্টি-ফ্যাক্টর অথেন্টিকেশন এবং AI পরিষেবা এখন সংযুক্ত নয়। উৎপাদন পরিবেশে ব্যাকএন্ড অনুমোদন এবং রোল-কন্ট্রোল বাধ্যতামূলক।';var blob=new Blob([text],{type:'text/plain'});var url=URL.createObjectURL(blob);var a=document.createElement('a');a.href=url;a.download='AIDC-handover-guide.txt';a.click();URL.revokeObjectURL(url);toast('Handover guide downloaded')});
+})();
+</script>
 </body>
 </html>
