@@ -1,0 +1,22 @@
+AI International Domain Center — PWA Deployment Note
+
+Official install identity
+- App name: AI International Domain Center
+- Official icon: icon.svg
+- Manifest: manifest.json
+- Service worker: sw.js
+- Start page: index.html
+
+No third-party website builder, “Made with”, “Powered by”, “Edit Version”, developer badge, platform watermark or builder advertisement is included by these PWA files.
+
+Android verification status
+- PWA files are implemented.
+- Actual install, splash, home icon and every screen have not yet been tested on a physical Android device or installed-browser emulator.
+- Builder or hosting-platform branding, if any is injected outside this repository, cannot be verified or claimed removed until deployment output is inspected.
+
+Install requirements
+- Deploy over HTTPS.
+- Keep all PWA files at the repository root.
+- Register sw.js from index.html with a manifest link.
+- Test installability in Chrome DevTools’ Application panel.
+- Inspect the generated Android install dialog, launcher icon, app information, splash screen and navigation on a real Android device.
