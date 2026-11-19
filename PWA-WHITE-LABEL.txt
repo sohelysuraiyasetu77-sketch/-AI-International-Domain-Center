@@ -1,0 +1,18 @@
+AI International Domain Center — White-Label PWA Status
+
+Official installed app identity:
+- Name: AI International Domain Center
+- Icon: icon.svg
+- Manifest: manifest.json
+- Service worker: sw.js
+- Start page: index.html
+
+Repository implementation:
+- PWA manifest and official icon are independently identified with AI International Domain Center.
+- No third-party website-builder identity or branding has been added to the project files.
+- No “Made with”, “Powered by”, “Edit Version”, builder badge, watermark or builder advertisement is included in the repository PWA assets.
+
+Android verification status:
+- NOT TESTED on a physical Android device or Android installed-app emulator.
+- Splash-screen behavior, launcher name/icon, app-information branding and screenshots of every screen must be inspected after HTTPS deployment.
+- Any builder branding injected by a hosting or deployment platform after publication is external to this repository and remains pending technical/legal verification. It must not be claimed as removed until the deployed output is inspected.
