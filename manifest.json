@@ -1,24 +1,24 @@
 {
-  "name": "AI International Domain Center",
-  "short_name": "AIDC",
-  "description": "AI International Domain Center — beginner-first international domain, website and app platform.",
   "id": "/",
+  "name": "AI International Domain Center",
+  "short_name": "AI Domain Center",
+  "description": "AI International Domain Center — beginner-first international domain, website, and app platform.",
   "start_url": "./index.html",
   "scope": "./",
   "display": "standalone",
-  "display_override": ["window-controls-overlay", "standalone", "minimal-ui"],
+  "display_override": ["standalone", "minimal-ui"],
+  "orientation": "any",
   "background_color": "#07111f",
   "theme_color": "#07111f",
-  "orientation": "any",
   "lang": "en",
   "dir": "ltr",
   "categories": ["business", "education", "productivity", "utilities"],
   "icons": [
-    { "src": "./icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable" }
-  ],
-  "shortcuts": [
-    { "name": "Domain Center", "short_name": "Domains", "url": "./index.html#domains", "icons": [{ "src": "./icon.svg", "sizes": "any", "type": "image/svg+xml" }] },
-    { "name": "Project Studio", "short_name": "Studio", "url": "./phase6-studio.html", "icons": [{ "src": "./icon.svg", "sizes": "any", "type": "image/svg+xml" }] },
-    { "name": "Admin Panel", "short_name": "Admin", "url": "./admin-panel.html", "icons": [{ "src": "./icon.svg", "sizes": "any", "type": "image/svg+xml" }] }
+    {
+      "src": "./icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
   ]
 }
